@@ -1,12 +1,21 @@
 package org.example
 
-class KataShould extends munit.FunSuite {
-  test("work with manual mock") {
+import collection.mutable.Stack
+import org.scalatest._
+import flatspec._
+import matchers._
+
+class KataShould extends AnyFlatSpec with should.Matchers {
+  it should "work with manual mocking" in {
     val dependency = DependencyImpl()
     val kata = new Kata(dependency)
 
     val result = kata.getValue
 
-    assertEquals(result, 0)
+    result should be (0)
+  }
+
+  it should "work with automatic mocking" in {
+
   }
 }
