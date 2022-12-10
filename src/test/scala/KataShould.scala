@@ -14,8 +14,4 @@ class KataShould extends AnyFlatSpec with should.Matchers {
 
     result should be (0)
   }
-
-  it should "work with automatic mocking" in {
-
-  }
 }
